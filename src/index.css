@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Karla", sans-serif;
+}
+
+.body{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    background-color: rgb(184, 184, 184);
+}
+
+.header{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    padding: 2rem;
+}
+
+.header-logo{
+    margin-right: 1rem;
+    width: 5rem;
+}
+
+.header-title{
+    margin: 0;
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-left: 2rem;
+}
