@@ -19,7 +19,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    width: 50%;
+    width: 30%;
     background-color: rgb(184, 184, 184);
 }
 
@@ -42,4 +42,49 @@ body {
     font-size: 3rem;
     font-weight: 500;
     margin-left: 2rem;
+}
+
+.meme-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.meme-form-input{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.meme-form-ln1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+input{
+    width: 20rem;
+    padding: 0.5rem;
+    font-size: large;
+}
+
+label{
+    margin-bottom: 0.5rem;
+    font-size: large;
+}
+
+.meme-form-ln2{
+    margin: auto;
+}
+
+.meme-form button{
+    border-radius: 0.2rem;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 48rem;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
 }
