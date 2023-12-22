@@ -13,7 +13,6 @@ export default function Meme() {
     
     const [allMemeImages, setAllMemeImages] = React.useState(memesData)
     
-    
     function handleClick() {
         const memesArray = allMemeImages.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
@@ -22,7 +21,6 @@ export default function Meme() {
             ...prevMeme,
             randomImage: url
         }))
-        
     }
 
     return (
@@ -30,11 +28,11 @@ export default function Meme() {
             <div className="meme-form">
                 <div className="meme-form-ln1">
                     <div className="meme-form-input">
-                        <label for="input1">Top text</label>
+                        <label htmlFor="input1">Top text</label>
                         <input type="text" placeholder="Shut Up" id="toptext"></input>
                     </div>
                     <div className="meme-form-input">
-                        <label for="bottomtext">Bottom text</label>
+                        <label htmlFor="bottomtext">Bottom text</label>
                         <input type="text" placeholder="And Take My Money" id="bottomtext"></input>
                     </div>
                 </div>
