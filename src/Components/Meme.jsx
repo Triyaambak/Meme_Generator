@@ -23,17 +23,27 @@ export default function Meme() {
         }))
     }
 
+    function handleChange(event) {
+        const { name , value } = event.target;
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            [name]:value,
+        }))
+    }
+
+    // console.log(meme);
+
     return (
         <div>
             <div className="meme-form">
                 <div className="meme-form-ln1">
                     <div className="meme-form-input">
                         <label htmlFor="input1">Top text</label>
-                        <input type="text" placeholder="Shut Up" id="toptext"></input>
+                        <input type="text" placeholder="Shut Up" id="toptext" name="topText" onChange={handleChange} value={meme.topText}></input>
                     </div>
                     <div className="meme-form-input">
                         <label htmlFor="bottomtext">Bottom text</label>
-                        <input type="text" placeholder="And Take My Money" id="bottomtext"></input>
+                        <input type="text" placeholder="And Take My Money" id="bottomtext" name="bottomText" onChange={handleChange} value={meme.bottomTextText}></input>
                     </div>
                 </div>
                 <div className="meme-form-ln2">
