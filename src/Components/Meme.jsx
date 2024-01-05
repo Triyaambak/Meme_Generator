@@ -13,7 +13,6 @@ export default function Meme() {
     
     const [allMemeImages, setAllMemeImages] = React.useState(memesData)
     
-    
     function handleClick() {
         const memesArray = allMemeImages.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length)
@@ -22,20 +21,29 @@ export default function Meme() {
             ...prevMeme,
             randomImage: url
         }))
-        
     }
+
+    function handleChange(event) {
+        const { name , value } = event.target;
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            [name]:value,
+        }))
+    }
+
+    // console.log(meme);
 
     return (
         <div>
             <div className="meme-form">
                 <div className="meme-form-ln1">
                     <div className="meme-form-input">
-                        <label for="input1">Top text</label>
-                        <input type="text" placeholder="Shut Up" id="toptext"></input>
+                        <label htmlFor="input1">Top text</label>
+                        <input type="text" placeholder="Shut Up" id="toptext" name="topText" onChange={handleChange} value={meme.topText}></input>
                     </div>
                     <div className="meme-form-input">
-                        <label for="bottomtext">Bottom text</label>
-                        <input type="text" placeholder="And Take My Money" id="bottomtext"></input>
+                        <label htmlFor="bottomtext">Bottom text</label>
+                        <input type="text" placeholder="And Take My Money" id="bottomtext" name="bottomText" onChange={handleChange} value={meme.bottomTextText}></input>
                     </div>
                 </div>
                 <div className="meme-form-ln2">
