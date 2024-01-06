@@ -4,7 +4,12 @@ import { useState,useEffect } from "react";
 export default function Meme() {
     
     useEffect(() => {
-        fetch("https://api.imgflip.com/get_memes").then(res =>res.json()).then(data=>setAllMeme(data.data.memes))
+        const getMeme = async () => {
+            const res = await fetch("https://api.imgflip.com/get_memes");
+            const data = await res.json();
+            setAllMeme(data.data.memes)
+        }
+        getMeme();
     },[])
 
      const [meme, setMeme] = useState({
@@ -31,8 +36,6 @@ export default function Meme() {
             [name]:value,
         }))
     }
-
-    // console.log(meme);
 
     return (
         <div>
